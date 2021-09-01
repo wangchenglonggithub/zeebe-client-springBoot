@@ -1,0 +1,10 @@
+#zeebe:
+#    client:
+#      gateway.address: 192.168.174.10:26500
+#      security.plaintext: true
+zeebe:
+  client:
+    broker:
+      gateway-address: 192.168.174.10:26500
+    security:
+      plaintext: true
