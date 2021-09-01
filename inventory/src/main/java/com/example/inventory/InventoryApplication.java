@@ -24,6 +24,7 @@ public class InventoryApplication {
     @ZeebeWorker(type = "inventory-service")
     public void handlePaymentJob(final JobClient client, final ActivatedJob job) {
         //todo 业务逻辑
+
         printfLog(job);
         client.newCompleteCommand(job.getKey()).variables("{\"inventory_count\": 11111}").send().join();
     }
